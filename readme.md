@@ -38,3 +38,13 @@ for other buttons:
 |  8 | left or right |
 |  9 |            ok |
 | 12 |       capture |
+
+list files:
+
+```
+% curl 'http://131.173.172.118:24170/eos/method/get_files_infos' \
+   --data 'file_name_path=/media/sda1/&start_index=0&end_index=5'
+get files infos command send
+% curl 'http://131.173.172.118:24170/eos/query/files_infos_get'
+{"files_infos":[{"parent_path": "/media/sda1/"},{"file_name": "141111-1854.mp4","file_size": "359.2 MB","file_length": "239","date": "2014/11/11 18:58:13","thumb_position": "/media/sda1/.thumb/.141111-1854_thumb.jpg","thumb_size": "8.9 KB","file_type": "1"}]}
+```
