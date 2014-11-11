@@ -48,3 +48,12 @@ get files infos command send
 % curl 'http://131.173.172.118:24170/eos/query/files_infos_get'
 {"files_infos":[{"parent_path": "/media/sda1/"},{"file_name": "141111-1854.mp4","file_size": "359.2 MB","file_length": "239","date": "2014/11/11 18:58:13","thumb_position": "/media/sda1/.thumb/.141111-1854_thumb.jpg","thumb_size": "8.9 KB","file_type": "1"}]}
 ```
+
+count files by path:
+```
+% curl 'http://131.173.172.118:24170/eos/method/get_file_counts_by_path' \
+   --data 'file_name_path=/media/sda1/'
+get file counts by path command send
+curl 'http://131.173.172.118:24170/eos/query/file_counts_get_by_path'
+{"response":{"result":"1"}}
+```
